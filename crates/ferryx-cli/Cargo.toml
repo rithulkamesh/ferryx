@@ -1,0 +1,25 @@
+[package]
+name = "cargo-ferryx"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+ferryx-build = { path = "../ferryx-build" }
+ferryx-ir = { path = "../ferryx-ir" }
+ferryx-parser = { path = "../ferryx-parser" }
+ferryx-rewrite = { path = "../ferryx-rewrite" }
+ferryx-runtime = { path = "../ferryx-runtime" }
+ferryx-target = { path = "../ferryx-target" }
+ferryx-typescript = { path = "../ferryx-typescript" }
+ferryx-wasm = { path = "../ferryx-wasm" }
+ferryx-openapi = { path = "../ferryx-openapi" }
+ferryx-grpc = { path = "../ferryx-grpc" }
+owo-colors.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+toml.workspace = true
+

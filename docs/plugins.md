@@ -9,7 +9,7 @@ ferryx plugins operate strictly on semantic IR.
 - serializer plugins
 - notebook renderer plugins
 
-Implemented in `emitters/ferryx-plugin`.
+Implemented in `crates/ferryx-plugin`.
 
 ## Contract
 

@@ -6,8 +6,8 @@ license.workspace = true
 
 [dependencies]
 anyhow.workspace = true
-ferryx-parser = { path = "../../core/ferryx-parser" }
-ferryx-python = { path = "../../emitters/ferryx-python" }
-ferryx-ir = { path = "../../core/ferryx-ir" }
+ferryx-parser = { path = "../ferryx-parser" }
+ferryx-python = { path = "../ferryx-python" }
+ferryx-ir = { path = "../ferryx-ir" }
 serde_json.workspace = true
 

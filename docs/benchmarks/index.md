@@ -1,10 +1,10 @@
 # Benchmarks
 
-Benchmark crate: `tooling/ferryx-bench`.
+Benchmark crate: `crates/ferryx-bench`.
 
 Run:
 
 ```bash
-cargo run --manifest-path tooling/ferryx-bench/Cargo.toml -- --suite all --output verification/benchmarks/latest.json
+cargo run --manifest-path crates/ferryx-bench/Cargo.toml -- --suite all --output verification/benchmarks/latest.json
 ```
 

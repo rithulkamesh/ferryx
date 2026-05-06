@@ -1,6 +1,6 @@
 # WASM Projection Model
 
-WASM emission is driven from semantic IR via `emitters/ferryx-wasm`.
+WASM emission is driven from semantic IR via `crates/ferryx-wasm`.
 
 ## Host Boundary Architecture
 

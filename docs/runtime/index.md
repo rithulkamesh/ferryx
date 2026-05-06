@@ -1,6 +1,6 @@
 # Runtime
 
-Runtime reflection and registry live in `core/ferryx-runtime`.
+Runtime reflection and registry live in `crates/ferryx-runtime`.
 
 Inspect with:
 

@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
   pull_request:
     paths:
-      - "core/ferryx-parser/**"
-      - "core/ferryx-runtime/**"
-      - "emitters/ferryx-python/**"
-      - "tooling/ferryx-build/**"
-      - "tooling/ferryx-bench/**"
+      - "crates/ferryx-parser/**"
+      - "crates/ferryx-runtime/**"
+      - "crates/ferryx-python/**"
+      - "crates/ferryx-build/**"
+      - "crates/ferryx-bench/**"
       - "benchmarks/**"
       - "verification/**"
 
@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
       - name: Run benchmark harness
-        run: cargo run --manifest-path tooling/ferryx-bench/Cargo.toml -- --suite all --output verification/benchmarks/latest.json
+        run: cargo run --manifest-path crates/ferryx-bench/Cargo.toml -- --suite all --output verification/benchmarks/latest.json
       - name: Regression check
         run: python3 evaluation/scripts/check_regression.py evaluation/results/baseline.json verification/benchmarks/latest.json 1.20
       - name: Generate markdown report

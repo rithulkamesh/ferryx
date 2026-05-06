@@ -18,7 +18,7 @@ ferryx treats performance as a compatibility dimension.
 - Bench harnesses live in `benchmarks/`.
 - Each benchmark run writes JSON artifacts under `evaluation/results/`.
 - CI stores historical benchmark artifacts for trend analysis.
-- Criterion benches run with `cargo bench --manifest-path tooling/ferryx-bench/Cargo.toml`.
+- Criterion benches run with `cargo bench --manifest-path crates/ferryx-bench/Cargo.toml`.
 - Markdown reports generated with `evaluation/scripts/generate_report.py`.
 
 ## Comparison Matrix Targets
@@ -44,6 +44,6 @@ Use:
 
 ```bash
 cargo run -p cargo-ferryx -- build --input examples/tensor/src/lib.rs --out-dir target/ferryx-bench --package ferryx_tensor
-cargo run --manifest-path tooling/ferryx-bench/Cargo.toml -- --suite all --output verification/benchmarks/latest.json
+cargo run --manifest-path crates/ferryx-bench/Cargo.toml -- --suite all --output verification/benchmarks/latest.json
 ```
 

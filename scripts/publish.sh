@@ -35,21 +35,21 @@ bash scripts/verify_all_artifacts.sh
 
 if $PUBLISH_RUST; then
   CRATES=(
-    core/ferryx-ir
-    core/ferryx-rewrite
-    core/ferryx-target
-    core/ferryx-runtime
-    core/ferryx-macros
-    core/ferryx-parser
-    emitters/ferryx-python
-    emitters/ferryx-plugin
-    emitters/ferryx-typescript
-    emitters/ferryx-wasm
-    emitters/ferryx-openapi
-    emitters/ferryx-grpc
-    tooling/ferryx-build
-    ffi/ferryx-ffi
-    tooling/ferryx-cli
+    crates/ferryx-ir
+    crates/ferryx-rewrite
+    crates/ferryx-target
+    crates/ferryx-runtime
+    crates/ferryx-macros
+    crates/ferryx-parser
+    crates/ferryx-python
+    crates/ferryx-plugin
+    crates/ferryx-typescript
+    crates/ferryx-wasm
+    crates/ferryx-openapi
+    crates/ferryx-grpc
+    crates/ferryx-build
+    crates/ferryx-ffi
+    crates/ferryx-cli
   )
   for crate in "${CRATES[@]}"; do
     if $DRY; then

@@ -1,6 +1,6 @@
 # Target Capability System
 
-Capability metadata is defined in `core/ferryx-target`.
+Capability metadata is defined in `crates/ferryx-target`.
 
 Each target declares support across:
 

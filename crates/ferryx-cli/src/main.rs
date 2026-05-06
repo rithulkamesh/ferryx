@@ -188,7 +188,7 @@ fn main() -> Result<()> {
             std::fs::write(
                 root.join("Cargo.toml"),
                 format!(
-                    "[package]\nname = \"{name}\"\nversion = \"0.1.0\"\nedition = \"2024\"\n\n[dependencies]\nferryx-macros = {{ path = \"../core/ferryx-macros\" }}\n"
+                    "[package]\nname = \"{name}\"\nversion = \"0.1.0\"\nedition = \"2024\"\n\n[dependencies]\nferryx-macros = {{ path = \"../crates/ferryx-macros\" }}\n"
                 ),
             )?;
             std::fs::write(
@@ -418,7 +418,7 @@ fn main() -> Result<()> {
             );
             println!(
                 "benchmarks:{}",
-                if Path::new("tooling/ferryx-bench/Cargo.toml").exists() {
+                if Path::new("crates/ferryx-bench/Cargo.toml").exists() {
                     "ok".green().to_string()
                 } else {
                     "missing".red().to_string()
@@ -491,7 +491,7 @@ fn main() -> Result<()> {
             let status = std::process::Command::new("cargo")
                 .arg("run")
                 .arg("--manifest-path")
-                .arg("tooling/ferryx-bench/Cargo.toml")
+                .arg("crates/ferryx-bench/Cargo.toml")
                 .arg("--")
                 .arg("--suite")
                 .arg(suite)

@@ -6,6 +6,6 @@ edition = "2024"
 [workspace]
 
 [dependencies]
-ferryx-macros = { path = "../../core/ferryx-macros" }
-ferryx-runtime = { path = "../../core/ferryx-runtime" }
+ferryx-macros = { path = "../../crates/ferryx-macros" }
+ferryx-runtime = { path = "../../crates/ferryx-runtime" }
 

@@ -1,6 +1,6 @@
 # Semantic Rewrite Engine
 
-`core/ferryx-rewrite` implements composable semantic passes.
+`crates/ferryx-rewrite` implements composable semantic passes.
 
 Pipeline shape:
 

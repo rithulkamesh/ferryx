@@ -1,11 +1,10 @@
 [package]
-name = "ferryx-typescript"
+name = "ferryx-wasm"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
 
 [dependencies]
-ferryx-ir = { path = "../../core/ferryx-ir" }
-ferryx-rewrite = { path = "../../core/ferryx-rewrite" }
+ferryx-ir = { path = "../ferryx-ir" }
 serde_json.workspace = true
 
