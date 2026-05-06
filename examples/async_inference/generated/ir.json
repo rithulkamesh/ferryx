@@ -1,0 +1,84 @@
+{
+  "ir_version": "0.2.0",
+  "stability": "Beta",
+  "name": "ferryx_async",
+  "modules": [
+    {
+      "id": "crate",
+      "path": [
+        "crate"
+      ],
+      "docs": {
+        "summary": "",
+        "details": "",
+        "attributes": []
+      },
+      "classes": [
+        {
+          "id": "crate::AsyncModel",
+          "module_id": "crate",
+          "name": "AsyncModel",
+          "visibility": "Public",
+          "docs": {
+            "summary": "",
+            "details": "",
+            "attributes": []
+          },
+          "fields": [
+            {
+              "name": "name",
+              "ty": {
+                "rust": "String"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            }
+          ]
+        }
+      ],
+      "enums": [],
+      "traits": [],
+      "impls": [
+        {
+          "id": "crate::impl::AsyncModel",
+          "module_id": "crate",
+          "target": {
+            "rust": "AsyncModel"
+          },
+          "trait_name": null,
+          "methods": [
+            {
+              "name": "infer",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": true,
+              "async_runtime": "Tokio",
+              "params": [
+                {
+                  "name": "input",
+                  "ty": {
+                    "rust": "Vec < f32 >"
+                  },
+                  "ownership": "Owned"
+                }
+              ],
+              "output": {
+                "rust": "Vec < f32 >"
+              },
+              "error": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

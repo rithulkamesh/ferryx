@@ -1,0 +1,29 @@
+name: Verification
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  verify-artifacts-and-suites:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Generate artifacts
+        run: bash scripts/generate_all_artifacts.sh
+      - name: Verify artifact drift
+        run: bash scripts/verify_all_artifacts.sh
+      - name: Run verification scripts
+        run: |
+          python3 scripts/run_prompt_verification.py
+          python3 scripts/render_prompt_report.py
+          python3 scripts/bundle_artifacts.py
+          python3 verification/golden/verify_golden.py
+          python3 verification/compatibility/check_ir_compat.py
+          python3 verification/smoke/smoke.py
+

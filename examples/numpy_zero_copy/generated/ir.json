@@ -1,0 +1,76 @@
+{
+  "ir_version": "0.2.0",
+  "stability": "Beta",
+  "name": "ferryx_numpy",
+  "modules": [
+    {
+      "id": "crate",
+      "path": [
+        "crate"
+      ],
+      "docs": {
+        "summary": "",
+        "details": "",
+        "attributes": []
+      },
+      "classes": [
+        {
+          "id": "crate::FloatBuffer",
+          "module_id": "crate",
+          "name": "FloatBuffer",
+          "visibility": "Public",
+          "docs": {
+            "summary": "",
+            "details": "",
+            "attributes": []
+          },
+          "fields": [
+            {
+              "name": "data",
+              "ty": {
+                "rust": "Vec < f32 >"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            }
+          ]
+        }
+      ],
+      "enums": [],
+      "traits": [],
+      "impls": [
+        {
+          "id": "crate::impl::FloatBuffer",
+          "module_id": "crate",
+          "target": {
+            "rust": "FloatBuffer"
+          },
+          "trait_name": null,
+          "methods": [
+            {
+              "name": "as_slice_len",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": false,
+              "async_runtime": null,
+              "params": [],
+              "output": {
+                "rust": "usize"
+              },
+              "error": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

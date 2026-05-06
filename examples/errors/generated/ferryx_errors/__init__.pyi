@@ -1,0 +1,9 @@
+from __future__ import annotations
+from typing import Protocol
+
+class Calculator:
+    ...
+    def divide(self, left: float, right: float) -> float: ...
+
+
+class MathError(Exception): ...

@@ -1,0 +1,15 @@
+{
+  "suite": "baseline",
+  "records": [
+    { "name": "call_overhead_rust_baseline", "unit": "ns/call", "value": 1000.0 },
+    { "name": "serde_roundtrip_vec_f32", "unit": "ms", "value": 10.0 },
+    { "name": "generator_input_scan_baseline", "unit": "ms", "value": 10.0 },
+    { "name": "reflection_lookup_scan", "unit": "ms", "value": 10.0 },
+    { "name": "memory_overhead_vec_f32", "unit": "bytes", "value": 100000.0 },
+    { "name": "wheel_startup_env_probe", "unit": "us", "value": 1000.0 },
+    { "name": "zero_copy_slice_view", "unit": "MB/s", "value": 1.0 },
+    { "name": "async_bridge_yield_loop", "unit": "us/op", "value": 100.0 }
+  ],
+  "notes": ["checked in baseline for regression tooling"]
+}
+

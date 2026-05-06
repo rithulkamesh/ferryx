@@ -1,0 +1,10 @@
+{
+  "hashes": {
+    "docs.md": "e693f163ca42492cee824a91bb61e187d2608e51d818b4ce6bcadfca200d1ef9",
+    "ferryx_tensor/__init__.py": "a57c0c97de9078fd432304da96d59e9ab96db1e822cd1de75b86b5618236070e",
+    "ferryx_tensor/__init__.pyi": "d911777f34666ef83e1de43b9c831b4e55222781a20a978792d1780d08db31fc",
+    "graph.dot": "dda964a97e42cd51e3e2cc86a83c123d63bfb214a055f6209d98d4c82e006827",
+    "graph.mmd": "4b2443692ed85b19515de8ef79ba238ad7d6f3c5fb9d31f9f031f5c0c7131076",
+    "ir.json": "d083cb9a8676c52d8cfa9f3680d793cdc2e8e6cd1b12b8f9c4a4a261b8cd4b90"
+  }
+}

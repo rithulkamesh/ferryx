@@ -1,0 +1,11 @@
+[package]
+name = "ferryx-parser"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+ferryx-ir = { path = "../ferryx-ir" }
+quote.workspace = true
+syn.workspace = true
+

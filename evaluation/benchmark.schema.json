@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ferryx benchmark report",
+  "type": "object",
+  "required": ["suite", "records", "notes"],
+  "properties": {
+    "suite": { "type": "string" },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "unit", "value"],
+        "properties": {
+          "name": { "type": "string" },
+          "unit": { "type": "string" },
+          "value": { "type": "number" }
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
+

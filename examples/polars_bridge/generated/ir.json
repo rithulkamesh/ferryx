@@ -1,0 +1,89 @@
+{
+  "ir_version": "0.2.0",
+  "stability": "Beta",
+  "name": "ferryx_polars",
+  "modules": [
+    {
+      "id": "crate",
+      "path": [
+        "crate"
+      ],
+      "docs": {
+        "summary": "",
+        "details": "",
+        "attributes": []
+      },
+      "classes": [
+        {
+          "id": "crate::ColumnBatch",
+          "module_id": "crate",
+          "name": "ColumnBatch",
+          "visibility": "Public",
+          "docs": {
+            "summary": "",
+            "details": "",
+            "attributes": []
+          },
+          "fields": [
+            {
+              "name": "name",
+              "ty": {
+                "rust": "String"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            },
+            {
+              "name": "values",
+              "ty": {
+                "rust": "Vec < f64 >"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            }
+          ]
+        }
+      ],
+      "enums": [],
+      "traits": [],
+      "impls": [
+        {
+          "id": "crate::impl::ColumnBatch",
+          "module_id": "crate",
+          "target": {
+            "rust": "ColumnBatch"
+          },
+          "trait_name": null,
+          "methods": [
+            {
+              "name": "mean",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": false,
+              "async_runtime": null,
+              "params": [],
+              "output": {
+                "rust": "f64"
+              },
+              "error": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

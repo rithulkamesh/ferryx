@@ -1,0 +1,31 @@
+name: RFC Proposal
+description: Start an RFC for architecture-level changes.
+title: "[rfc] "
+labels: ["kind:rfc", "needs:triage"]
+body:
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Which subsystem and compatibility surfaces are affected?
+    validations:
+      required: true
+  - type: checkboxes
+    id: required
+    attributes:
+      label: RFC-required categories
+      options:
+        - label: ABI change
+        - label: IR schema change
+        - label: Macro syntax change
+        - label: Async model change
+        - label: Ownership semantics change
+        - label: New language target
+  - type: textarea
+    id: draft
+    attributes:
+      label: Initial draft
+      description: Link branch or paste initial RFC summary.
+    validations:
+      required: true
+

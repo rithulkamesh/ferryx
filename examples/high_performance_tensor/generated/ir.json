@@ -1,0 +1,84 @@
+{
+  "ir_version": "0.2.0",
+  "stability": "Beta",
+  "name": "ferryx_hpt",
+  "modules": [
+    {
+      "id": "crate",
+      "path": [
+        "crate"
+      ],
+      "docs": {
+        "summary": "",
+        "details": "",
+        "attributes": []
+      },
+      "classes": [
+        {
+          "id": "crate::FastTensor",
+          "module_id": "crate",
+          "name": "FastTensor",
+          "visibility": "Public",
+          "docs": {
+            "summary": "",
+            "details": "",
+            "attributes": []
+          },
+          "fields": [
+            {
+              "name": "data",
+              "ty": {
+                "rust": "Vec < f32 >"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            }
+          ]
+        }
+      ],
+      "enums": [],
+      "traits": [],
+      "impls": [
+        {
+          "id": "crate::impl::FastTensor",
+          "module_id": "crate",
+          "target": {
+            "rust": "FastTensor"
+          },
+          "trait_name": null,
+          "methods": [
+            {
+              "name": "dot",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": false,
+              "async_runtime": null,
+              "params": [
+                {
+                  "name": "other",
+                  "ty": {
+                    "rust": "FastTensor"
+                  },
+                  "ownership": "Owned"
+                }
+              ],
+              "output": {
+                "rust": "f32"
+              },
+              "error": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

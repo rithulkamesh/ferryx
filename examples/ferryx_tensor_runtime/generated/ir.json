@@ -1,0 +1,156 @@
+{
+  "ir_version": "0.2.0",
+  "stability": "Beta",
+  "name": "ferryx_tensor_runtime",
+  "modules": [
+    {
+      "id": "crate",
+      "path": [
+        "crate"
+      ],
+      "docs": {
+        "summary": "",
+        "details": "",
+        "attributes": []
+      },
+      "classes": [
+        {
+          "id": "crate::TensorRuntime",
+          "module_id": "crate",
+          "name": "TensorRuntime",
+          "visibility": "Public",
+          "docs": {
+            "summary": "",
+            "details": "",
+            "attributes": []
+          },
+          "fields": [
+            {
+              "name": "shape",
+              "ty": {
+                "rust": "Vec < usize >"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            },
+            {
+              "name": "data",
+              "ty": {
+                "rust": "Vec < f32 >"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            }
+          ]
+        }
+      ],
+      "enums": [],
+      "traits": [],
+      "impls": [
+        {
+          "id": "crate::impl::TensorRuntime",
+          "module_id": "crate",
+          "target": {
+            "rust": "TensorRuntime"
+          },
+          "trait_name": null,
+          "methods": [
+            {
+              "name": "new",
+              "receiver": "Static",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": false,
+              "async_runtime": null,
+              "params": [
+                {
+                  "name": "shape",
+                  "ty": {
+                    "rust": "Vec < usize >"
+                  },
+                  "ownership": "Owned"
+                },
+                {
+                  "name": "data",
+                  "ty": {
+                    "rust": "Vec < f32 >"
+                  },
+                  "ownership": "Owned"
+                }
+              ],
+              "output": {
+                "rust": "TensorRuntime"
+              },
+              "error": {
+                "rust": "String"
+              }
+            },
+            {
+              "name": "matmul2x2",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": false,
+              "async_runtime": null,
+              "params": [
+                {
+                  "name": "other",
+                  "ty": {
+                    "rust": "TensorRuntime"
+                  },
+                  "ownership": "Owned"
+                }
+              ],
+              "output": {
+                "rust": "TensorRuntime"
+              },
+              "error": {
+                "rust": "String"
+              }
+            },
+            {
+              "name": "scale_async",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": true,
+              "async_runtime": "Tokio",
+              "params": [
+                {
+                  "name": "factor",
+                  "ty": {
+                    "rust": "f32"
+                  },
+                  "ownership": "Owned"
+                }
+              ],
+              "output": {
+                "rust": "TensorRuntime"
+              },
+              "error": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

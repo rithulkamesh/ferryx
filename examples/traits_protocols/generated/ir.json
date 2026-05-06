@@ -1,0 +1,110 @@
+{
+  "ir_version": "0.2.0",
+  "stability": "Beta",
+  "name": "ferryx_traits",
+  "modules": [
+    {
+      "id": "crate",
+      "path": [
+        "crate"
+      ],
+      "docs": {
+        "summary": "",
+        "details": "",
+        "attributes": []
+      },
+      "classes": [
+        {
+          "id": "crate::ModelOutput",
+          "module_id": "crate",
+          "name": "ModelOutput",
+          "visibility": "Public",
+          "docs": {
+            "summary": "",
+            "details": "",
+            "attributes": []
+          },
+          "fields": [
+            {
+              "name": "confidence",
+              "ty": {
+                "rust": "f32"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            }
+          ]
+        }
+      ],
+      "enums": [],
+      "traits": [],
+      "impls": [
+        {
+          "id": "crate::impl::ModelOutput",
+          "module_id": "crate",
+          "target": {
+            "rust": "ModelOutput"
+          },
+          "trait_name": "Scorable",
+          "methods": [
+            {
+              "name": "score",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": false,
+              "async_runtime": null,
+              "params": [],
+              "output": {
+                "rust": "f32"
+              },
+              "error": null
+            }
+          ]
+        },
+        {
+          "id": "crate::impl::ModelOutput",
+          "module_id": "crate",
+          "target": {
+            "rust": "ModelOutput"
+          },
+          "trait_name": null,
+          "methods": [
+            {
+              "name": "calibrated",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": false,
+              "async_runtime": null,
+              "params": [
+                {
+                  "name": "factor",
+                  "ty": {
+                    "rust": "f32"
+                  },
+                  "ownership": "Owned"
+                }
+              ],
+              "output": {
+                "rust": "ModelOutput"
+              },
+              "error": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

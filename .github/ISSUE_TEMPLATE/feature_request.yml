@@ -1,0 +1,29 @@
+name: Feature Request
+description: Propose new capability aligned with ferryx architecture.
+title: "[feature] "
+labels: ["kind:feature", "needs:triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What workflow is currently blocked?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Outline design and expected API shape.
+    validations:
+      required: true
+  - type: checkboxes
+    id: architecture
+    attributes:
+      label: Architecture constraints
+      options:
+        - label: Preserves Rust AST -> semantic IR -> emitter flow
+          required: true
+        - label: No direct AST -> Python generation
+          required: true
+

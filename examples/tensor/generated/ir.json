@@ -1,0 +1,84 @@
+{
+  "ir_version": "0.2.0",
+  "stability": "Beta",
+  "name": "ferryx_tensor",
+  "modules": [
+    {
+      "id": "crate",
+      "path": [
+        "crate"
+      ],
+      "docs": {
+        "summary": "",
+        "details": "",
+        "attributes": []
+      },
+      "classes": [
+        {
+          "id": "crate::Tensor",
+          "module_id": "crate",
+          "name": "Tensor",
+          "visibility": "Public",
+          "docs": {
+            "summary": "",
+            "details": "",
+            "attributes": []
+          },
+          "fields": [
+            {
+              "name": "data",
+              "ty": {
+                "rust": "Vec < f32 >"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            }
+          ]
+        }
+      ],
+      "enums": [],
+      "traits": [],
+      "impls": [
+        {
+          "id": "crate::impl::Tensor",
+          "module_id": "crate",
+          "target": {
+            "rust": "Tensor"
+          },
+          "trait_name": null,
+          "methods": [
+            {
+              "name": "add",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": false,
+              "async_runtime": null,
+              "params": [
+                {
+                  "name": "other",
+                  "ty": {
+                    "rust": "Tensor"
+                  },
+                  "ownership": "Owned"
+                }
+              ],
+              "output": {
+                "rust": "Tensor"
+              },
+              "error": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

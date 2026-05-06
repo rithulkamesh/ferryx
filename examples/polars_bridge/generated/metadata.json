@@ -1,0 +1,10 @@
+{
+  "hashes": {
+    "docs.md": "20880df4cc1d10d5358582aff5066153b896cad98bed662854a26a4ed9618ec6",
+    "ferryx_polars/__init__.py": "fc15951db01634e9181abd8c4390b0d40e6ed9681c3f546bf5c8f0a78ec5b6b8",
+    "ferryx_polars/__init__.pyi": "b399ed6dc9aa435bbeedac6ee4c744094cd70418449f7728e0b73888e69baf8f",
+    "graph.dot": "d2b33a367f2b88f76413c5f20e984eb23c8454477e763eca9a8523a032a944e3",
+    "graph.mmd": "5d8fd389ccf0b21d687134f2b5cac7e2a53402ad82a7dd89e4f68b4da436f386",
+    "ir.json": "740da03f397b064928b4e07f8b65532bb6052f8ab4426943dc3a34f089d7747e"
+  }
+}

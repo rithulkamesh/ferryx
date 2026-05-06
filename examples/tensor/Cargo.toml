@@ -1,0 +1,11 @@
+[package]
+name = "ferryx-example-tensor"
+version = "0.1.0"
+edition = "2024"
+
+[workspace]
+
+[dependencies]
+ferryx-macros = { path = "../../core/ferryx-macros" }
+ferryx-runtime = { path = "../../core/ferryx-runtime" }
+

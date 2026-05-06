@@ -1,0 +1,110 @@
+{
+  "ir_version": "0.2.0",
+  "stability": "Beta",
+  "name": "ferryx_basic",
+  "modules": [
+    {
+      "id": "crate",
+      "path": [
+        "crate"
+      ],
+      "docs": {
+        "summary": "",
+        "details": "",
+        "attributes": []
+      },
+      "classes": [
+        {
+          "id": "crate::UserProfile",
+          "module_id": "crate",
+          "name": "UserProfile",
+          "visibility": "Public",
+          "docs": {
+            "summary": "",
+            "details": "",
+            "attributes": []
+          },
+          "fields": [
+            {
+              "name": "id",
+              "ty": {
+                "rust": "u64"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            },
+            {
+              "name": "name",
+              "ty": {
+                "rust": "String"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            },
+            {
+              "name": "active",
+              "ty": {
+                "rust": "bool"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            }
+          ]
+        }
+      ],
+      "enums": [],
+      "traits": [],
+      "impls": [
+        {
+          "id": "crate::impl::UserProfile",
+          "module_id": "crate",
+          "target": {
+            "rust": "UserProfile"
+          },
+          "trait_name": null,
+          "methods": [
+            {
+              "name": "rename",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": false,
+              "async_runtime": null,
+              "params": [
+                {
+                  "name": "new_name",
+                  "ty": {
+                    "rust": "String"
+                  },
+                  "ownership": "Owned"
+                }
+              ],
+              "output": {
+                "rust": "UserProfile"
+              },
+              "error": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

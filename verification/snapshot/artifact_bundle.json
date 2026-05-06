@@ -1,0 +1,119 @@
+{
+  "polars_bridge": [
+    "examples/polars_bridge/generated/docs.md",
+    "examples/polars_bridge/generated/ferryx_polars/__init__.py",
+    "examples/polars_bridge/generated/ferryx_polars/__init__.pyi",
+    "examples/polars_bridge/generated/graph.dot",
+    "examples/polars_bridge/generated/graph.mmd",
+    "examples/polars_bridge/generated/ir.json",
+    "examples/polars_bridge/generated/metadata.json"
+  ],
+  "basic_structs": [
+    "examples/basic_structs/generated/docs.md",
+    "examples/basic_structs/generated/ferryx_basic/__init__.py",
+    "examples/basic_structs/generated/ferryx_basic/__init__.pyi",
+    "examples/basic_structs/generated/graph.dot",
+    "examples/basic_structs/generated/graph.mmd",
+    "examples/basic_structs/generated/ir.json",
+    "examples/basic_structs/generated/metadata.json"
+  ],
+  "ferryx_tensor_runtime": [
+    "examples/ferryx_tensor_runtime/generated/docs.md",
+    "examples/ferryx_tensor_runtime/generated/ferryx_tensor_runtime/__init__.py",
+    "examples/ferryx_tensor_runtime/generated/ferryx_tensor_runtime/__init__.pyi",
+    "examples/ferryx_tensor_runtime/generated/graph.dot",
+    "examples/ferryx_tensor_runtime/generated/graph.mmd",
+    "examples/ferryx_tensor_runtime/generated/ir.json",
+    "examples/ferryx_tensor_runtime/generated/metadata.json"
+  ],
+  "high_performance_tensor": [
+    "examples/high_performance_tensor/generated/docs.md",
+    "examples/high_performance_tensor/generated/ferryx_hpt/__init__.py",
+    "examples/high_performance_tensor/generated/ferryx_hpt/__init__.pyi",
+    "examples/high_performance_tensor/generated/graph.dot",
+    "examples/high_performance_tensor/generated/graph.mmd",
+    "examples/high_performance_tensor/generated/ir.json",
+    "examples/high_performance_tensor/generated/metadata.json"
+  ],
+  "jupyter_demo": [
+    "examples/jupyter_demo/generated/docs.md",
+    "examples/jupyter_demo/generated/ferryx_jupyter/__init__.py",
+    "examples/jupyter_demo/generated/ferryx_jupyter/__init__.pyi",
+    "examples/jupyter_demo/generated/graph.dot",
+    "examples/jupyter_demo/generated/graph.mmd",
+    "examples/jupyter_demo/generated/ir.json",
+    "examples/jupyter_demo/generated/metadata.json"
+  ],
+  "notebook_experience": [
+    "examples/notebook_experience/generated/docs.md",
+    "examples/notebook_experience/generated/ferryx_notebook/__init__.py",
+    "examples/notebook_experience/generated/ferryx_notebook/__init__.pyi",
+    "examples/notebook_experience/generated/graph.dot",
+    "examples/notebook_experience/generated/graph.mmd",
+    "examples/notebook_experience/generated/ir.json",
+    "examples/notebook_experience/generated/metadata.json"
+  ],
+  "traits_protocols": [
+    "examples/traits_protocols/generated/docs.md",
+    "examples/traits_protocols/generated/ferryx_traits/__init__.py",
+    "examples/traits_protocols/generated/ferryx_traits/__init__.pyi",
+    "examples/traits_protocols/generated/graph.dot",
+    "examples/traits_protocols/generated/graph.mmd",
+    "examples/traits_protocols/generated/ir.json",
+    "examples/traits_protocols/generated/metadata.json"
+  ],
+  "numpy_zero_copy": [
+    "examples/numpy_zero_copy/generated/docs.md",
+    "examples/numpy_zero_copy/generated/ferryx_numpy/__init__.py",
+    "examples/numpy_zero_copy/generated/ferryx_numpy/__init__.pyi",
+    "examples/numpy_zero_copy/generated/graph.dot",
+    "examples/numpy_zero_copy/generated/graph.mmd",
+    "examples/numpy_zero_copy/generated/ir.json",
+    "examples/numpy_zero_copy/generated/metadata.json"
+  ],
+  "async_inference": [
+    "examples/async_inference/generated/docs.md",
+    "examples/async_inference/generated/ferryx_async/__init__.py",
+    "examples/async_inference/generated/ferryx_async/__init__.pyi",
+    "examples/async_inference/generated/graph.dot",
+    "examples/async_inference/generated/graph.mmd",
+    "examples/async_inference/generated/ir.json",
+    "examples/async_inference/generated/metadata.json"
+  ],
+  "arrow_bridge": [
+    "examples/arrow_bridge/generated/docs.md",
+    "examples/arrow_bridge/generated/ferryx_arrow/__init__.py",
+    "examples/arrow_bridge/generated/ferryx_arrow/__init__.pyi",
+    "examples/arrow_bridge/generated/graph.dot",
+    "examples/arrow_bridge/generated/graph.mmd",
+    "examples/arrow_bridge/generated/ir.json",
+    "examples/arrow_bridge/generated/metadata.json"
+  ],
+  "llm_runtime": [
+    "examples/llm_runtime/generated/docs.md",
+    "examples/llm_runtime/generated/ferryx_llm/__init__.py",
+    "examples/llm_runtime/generated/ferryx_llm/__init__.pyi",
+    "examples/llm_runtime/generated/graph.dot",
+    "examples/llm_runtime/generated/graph.mmd",
+    "examples/llm_runtime/generated/ir.json",
+    "examples/llm_runtime/generated/metadata.json"
+  ],
+  "tensor": [
+    "examples/tensor/generated/docs.md",
+    "examples/tensor/generated/ferryx_tensor/__init__.py",
+    "examples/tensor/generated/ferryx_tensor/__init__.pyi",
+    "examples/tensor/generated/graph.dot",
+    "examples/tensor/generated/graph.mmd",
+    "examples/tensor/generated/ir.json",
+    "examples/tensor/generated/metadata.json"
+  ],
+  "errors": [
+    "examples/errors/generated/docs.md",
+    "examples/errors/generated/ferryx_errors/__init__.py",
+    "examples/errors/generated/ferryx_errors/__init__.pyi",
+    "examples/errors/generated/graph.dot",
+    "examples/errors/generated/graph.mmd",
+    "examples/errors/generated/ir.json",
+    "examples/errors/generated/metadata.json"
+  ]
+}

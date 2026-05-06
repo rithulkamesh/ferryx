@@ -1,0 +1,7 @@
+digraph FerryxIR {
+  package [label="IrPackage"];
+  module_crate [label="crate"];
+  package -> module_crate;
+  class_crate::ArrowColumn [label="ArrowColumn"];
+  module_crate -> class_crate::ArrowColumn;
+}

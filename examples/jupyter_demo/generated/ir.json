@@ -1,0 +1,84 @@
+{
+  "ir_version": "0.2.0",
+  "stability": "Beta",
+  "name": "ferryx_jupyter",
+  "modules": [
+    {
+      "id": "crate",
+      "path": [
+        "crate"
+      ],
+      "docs": {
+        "summary": "",
+        "details": "",
+        "attributes": []
+      },
+      "classes": [
+        {
+          "id": "crate::NotebookKernel",
+          "module_id": "crate",
+          "name": "NotebookKernel",
+          "visibility": "Public",
+          "docs": {
+            "summary": "",
+            "details": "",
+            "attributes": []
+          },
+          "fields": [
+            {
+              "name": "session_id",
+              "ty": {
+                "rust": "String"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            }
+          ]
+        }
+      ],
+      "enums": [],
+      "traits": [],
+      "impls": [
+        {
+          "id": "crate::impl::NotebookKernel",
+          "module_id": "crate",
+          "target": {
+            "rust": "NotebookKernel"
+          },
+          "trait_name": null,
+          "methods": [
+            {
+              "name": "execute_cell",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": false,
+              "async_runtime": null,
+              "params": [
+                {
+                  "name": "code",
+                  "ty": {
+                    "rust": "String"
+                  },
+                  "ownership": "Owned"
+                }
+              ],
+              "output": {
+                "rust": "String"
+              },
+              "error": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

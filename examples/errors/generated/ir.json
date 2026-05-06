@@ -1,0 +1,79 @@
+{
+  "ir_version": "0.2.0",
+  "stability": "Beta",
+  "name": "ferryx_errors",
+  "modules": [
+    {
+      "id": "crate",
+      "path": [
+        "crate"
+      ],
+      "docs": {
+        "summary": "",
+        "details": "",
+        "attributes": []
+      },
+      "classes": [
+        {
+          "id": "crate::Calculator",
+          "module_id": "crate",
+          "name": "Calculator",
+          "visibility": "Public",
+          "docs": {
+            "summary": "",
+            "details": "",
+            "attributes": []
+          },
+          "fields": []
+        }
+      ],
+      "enums": [],
+      "traits": [],
+      "impls": [
+        {
+          "id": "crate::impl::Calculator",
+          "module_id": "crate",
+          "target": {
+            "rust": "Calculator"
+          },
+          "trait_name": null,
+          "methods": [
+            {
+              "name": "divide",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": false,
+              "async_runtime": null,
+              "params": [
+                {
+                  "name": "left",
+                  "ty": {
+                    "rust": "f32"
+                  },
+                  "ownership": "Owned"
+                },
+                {
+                  "name": "right",
+                  "ty": {
+                    "rust": "f32"
+                  },
+                  "ownership": "Owned"
+                }
+              ],
+              "output": {
+                "rust": "f32"
+              },
+              "error": {
+                "rust": "MathError"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

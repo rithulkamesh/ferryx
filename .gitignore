@@ -1,0 +1,22 @@
+# Rust build outputs (workspace + nested example workspaces)
+target/
+**/target/
+
+# Local temporary generation directories
+**/.generated-verify/
+
+# Python cache / virtualenv
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Wheel and packaging artifacts
+dist/
+*.whl
+
+# OS / editor noise
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,11 @@
+[book]
+title = "ferryx"
+authors = ["ferryx maintainers"]
+language = "en"
+multilingual = false
+src = "src"
+
+[output.html]
+default-theme = "navy"
+git-repository-url = "https://github.com/rithulkamesh/ferryx"
+

@@ -1,0 +1,19 @@
+[package]
+name = "cargo-ferryx"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+ferryx-build = { path = "../ferryx-build" }
+ferryx-ir = { path = "../../core/ferryx-ir" }
+ferryx-parser = { path = "../../core/ferryx-parser" }
+ferryx-rewrite = { path = "../../core/ferryx-rewrite" }
+ferryx-runtime = { path = "../../core/ferryx-runtime" }
+owo-colors.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+

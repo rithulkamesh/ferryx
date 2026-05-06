@@ -1,0 +1,15 @@
+[package]
+name = "ferryx-runtime"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+ferryx-ir = { path = "../ferryx-ir" }
+inventory.workspace = true
+once_cell.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+ferryx-macros = { path = "../ferryx-macros" }
+
