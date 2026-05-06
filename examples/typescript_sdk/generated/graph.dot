@@ -1,0 +1,7 @@
+digraph FerryxIR {
+  package [label="IrPackage"];
+  module_crate [label="crate"];
+  package -> module_crate;
+  class_crate::UserApi [label="UserApi"];
+  module_crate -> class_crate::UserApi;
+}

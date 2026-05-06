@@ -1,0 +1,62 @@
+{
+  "ir_version": "0.2.0",
+  "stability": "Beta",
+  "name": "ferryx_openapi_service",
+  "modules": [
+    {
+      "id": "crate",
+      "path": [
+        "crate"
+      ],
+      "docs": {
+        "summary": "",
+        "details": "",
+        "attributes": []
+      },
+      "classes": [
+        {
+          "id": "crate::HealthService",
+          "module_id": "crate",
+          "name": "HealthService",
+          "visibility": "Public",
+          "docs": {
+            "summary": "",
+            "details": "",
+            "attributes": []
+          },
+          "fields": []
+        }
+      ],
+      "enums": [],
+      "traits": [],
+      "impls": [
+        {
+          "id": "crate::impl::HealthService",
+          "module_id": "crate",
+          "target": {
+            "rust": "HealthService"
+          },
+          "trait_name": null,
+          "methods": [
+            {
+              "name": "check",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": true,
+              "async_runtime": "Tokio",
+              "params": [],
+              "output": {
+                "rust": "String"
+              },
+              "error": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

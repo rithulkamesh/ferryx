@@ -1,0 +1,19 @@
+name: NPM Publish
+
+on:
+  workflow_dispatch:
+
+jobs:
+  npm-dry-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Generate TypeScript SDK
+        run: cargo run -p cargo-ferryx -- emit-typescript --input examples/typescript_sdk/src/lib.rs --out-dir examples/typescript_sdk/generated --package ferryx_typescript_sdk
+      - name: npm package dry run
+        run: bash scripts/publish.sh --typescript --dry-run
+

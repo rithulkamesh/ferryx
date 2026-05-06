@@ -15,6 +15,10 @@ Progressive examples from basic projection to async and data interop:
 11. `llm_runtime` — async LLM runtime projection.
 12. `high_performance_tensor` — high-throughput tensor kernels.
 13. `ferryx_tensor_runtime` — self-hosting stress validation runtime.
+14. `typescript_sdk` — IR-driven TypeScript package generation.
+15. `wasm_runtime` — wasm host-bridge projection model.
+16. `openapi_service` — OpenAPI schema projection.
+17. `grpc_service` — protobuf service projection.
 
 Each example contains:
 

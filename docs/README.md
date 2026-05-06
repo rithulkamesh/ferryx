@@ -15,6 +15,7 @@
 - `evaluation/`: correctness and benchmark methodology.
 - `rewrite_engine.md`: semantic rewrite passes and pipeline design.
 - `plugins.md`: emitter and extension model.
+- `target_capabilities.md`: per-target feature matrix and validation.
 - `ir_versioning.md` + `stability.md`: compatibility contracts.
 - `graph_visualization.md`: IR graph rendering and export.
 - `notebook_experience.md`: notebook renderer model.

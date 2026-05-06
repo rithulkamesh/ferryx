@@ -2,10 +2,13 @@ use std::collections::BTreeMap;
 use std::sync::{Arc, RwLock};
 
 use ferryx_ir::IrPackage;
+use ferryx_target::{TargetCapabilities, TargetLanguage};
 use once_cell::sync::Lazy;
 
 pub trait EmitterPlugin: Send + Sync {
     fn id(&self) -> &'static str;
+    fn target(&self) -> TargetLanguage;
+    fn capabilities(&self) -> TargetCapabilities;
     fn emit(&self, package: &IrPackage) -> BTreeMap<String, String>;
 }
 
@@ -47,6 +50,13 @@ impl PluginRegistry {
     }
     pub fn emitter_ids(&self) -> Vec<String> {
         self.emitters.keys().cloned().collect()
+    }
+
+    pub fn discover_emitters(&self) -> Vec<(String, TargetLanguage, TargetCapabilities)> {
+        self.emitters
+            .iter()
+            .map(|(id, plugin)| (id.clone(), plugin.target(), plugin.capabilities()))
+            .collect()
     }
 }
 

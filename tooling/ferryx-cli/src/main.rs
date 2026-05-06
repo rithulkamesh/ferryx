@@ -3,7 +3,12 @@ use std::time::Instant;
 
 use anyhow::{Context, Result};
 use clap::{Parser, Subcommand};
+use ferryx_grpc::emit_proto;
 use ferryx_ir::validate_ir_compatibility;
+use ferryx_openapi::emit_openapi_json;
+use ferryx_target::{validate_target_compatibility, TargetLanguage};
+use ferryx_typescript::emit_typescript;
+use ferryx_wasm::emit_wasm;
 use ferryx_build::{run_build, BuildConfig};
 use ferryx_rewrite::{default_python_rewrite_pipeline, RewriteContext};
 use owo_colors::OwoColorize;
@@ -55,6 +60,38 @@ enum Command {
         #[arg(long)]
         out_dir: PathBuf,
         #[arg(long, default_value = "ferryx_project")]
+        package: String,
+    },
+    EmitTypescript {
+        #[arg(long)]
+        input: PathBuf,
+        #[arg(long)]
+        out_dir: PathBuf,
+        #[arg(long, default_value = "ferryx_typescript_sdk")]
+        package: String,
+    },
+    EmitWasm {
+        #[arg(long)]
+        input: PathBuf,
+        #[arg(long)]
+        out_dir: PathBuf,
+        #[arg(long, default_value = "ferryx_wasm_runtime")]
+        package: String,
+    },
+    EmitOpenapi {
+        #[arg(long)]
+        input: PathBuf,
+        #[arg(long)]
+        out_file: PathBuf,
+        #[arg(long, default_value = "ferryx_openapi")]
+        package: String,
+    },
+    EmitGrpc {
+        #[arg(long)]
+        input: PathBuf,
+        #[arg(long)]
+        out_file: PathBuf,
+        #[arg(long, default_value = "ferryx_grpc")]
         package: String,
     },
     GenerateArtifacts {
@@ -119,6 +156,26 @@ enum Command {
         input: PathBuf,
         #[arg(long, default_value = "ferryx_project")]
         package: String,
+    },
+    Release {
+        #[arg(long, default_value = "patch")]
+        level: String,
+        #[arg(long, default_value_t = false)]
+        prerelease: bool,
+        #[arg(long, default_value_t = false)]
+        nightly: bool,
+        #[arg(long, default_value_t = false)]
+        dry_run: bool,
+    },
+    Publish {
+        #[arg(long, default_value_t = false)]
+        rust: bool,
+        #[arg(long, default_value_t = false)]
+        python: bool,
+        #[arg(long, default_value_t = false)]
+        typescript: bool,
+        #[arg(long, default_value_t = false)]
+        dry_run: bool,
     },
 }
 
@@ -201,6 +258,66 @@ fn main() -> Result<()> {
                 "{}",
                 format!("generated {} files", artifacts.emitted_files.len()).green()
             );
+        }
+        Command::EmitTypescript {
+            input,
+            out_dir,
+            package,
+        } => {
+            let source = std::fs::read_to_string(&input)?;
+            let ir = ferryx_parser::parse_source_to_ir(&package, &source)?;
+            for warn in validate_target_compatibility(&ir, TargetLanguage::TypeScript) {
+                eprintln!("{}", format!("target warning: {warn}").yellow());
+            }
+            std::fs::create_dir_all(&out_dir)?;
+            let emission = emit_typescript(&ir);
+            for file in emission.files {
+                write_text(&out_dir.join(file.path), &file.content)?;
+            }
+            println!("{}", format!("typescript sdk emitted to {}", out_dir.display()).green());
+        }
+        Command::EmitWasm {
+            input,
+            out_dir,
+            package,
+        } => {
+            let source = std::fs::read_to_string(&input)?;
+            let ir = ferryx_parser::parse_source_to_ir(&package, &source)?;
+            for warn in validate_target_compatibility(&ir, TargetLanguage::Wasm) {
+                eprintln!("{}", format!("target warning: {warn}").yellow());
+            }
+            std::fs::create_dir_all(&out_dir)?;
+            let emission = emit_wasm(&ir);
+            for file in emission.files {
+                write_text(&out_dir.join(file.path), &file.content)?;
+            }
+            println!("{}", format!("wasm projection emitted to {}", out_dir.display()).green());
+        }
+        Command::EmitOpenapi {
+            input,
+            out_file,
+            package,
+        } => {
+            let source = std::fs::read_to_string(&input)?;
+            let ir = ferryx_parser::parse_source_to_ir(&package, &source)?;
+            for warn in validate_target_compatibility(&ir, TargetLanguage::OpenApi) {
+                eprintln!("{}", format!("target warning: {warn}").yellow());
+            }
+            write_text(&out_file, &emit_openapi_json(&ir))?;
+            println!("{}", format!("openapi emitted to {}", out_file.display()).green());
+        }
+        Command::EmitGrpc {
+            input,
+            out_file,
+            package,
+        } => {
+            let source = std::fs::read_to_string(&input)?;
+            let ir = ferryx_parser::parse_source_to_ir(&package, &source)?;
+            for warn in validate_target_compatibility(&ir, TargetLanguage::Grpc) {
+                eprintln!("{}", format!("target warning: {warn}").yellow());
+            }
+            write_text(&out_file, &emit_proto(&ir))?;
+            println!("{}", format!("grpc proto emitted to {}", out_file.display()).green());
         }
         Command::GenerateArtifacts {
             input,
@@ -413,6 +530,57 @@ fn main() -> Result<()> {
                         println!("- {}: {}", field.name, field.ty.rust);
                     }
                 }
+            }
+        }
+        Command::Release {
+            level,
+            prerelease,
+            nightly,
+            dry_run,
+        } => {
+            let status = std::process::Command::new("bash")
+                .arg("scripts/version.sh")
+                .arg(level)
+                .arg(if prerelease { "true" } else { "false" })
+                .arg(if nightly { "true" } else { "false" })
+                .arg(if dry_run { "true" } else { "false" })
+                .status()?;
+            if !status.success() {
+                anyhow::bail!("version step failed");
+            }
+            let status = std::process::Command::new("bash")
+                .arg("scripts/publish.sh")
+                .arg(if dry_run { "--dry-run" } else { "--release" })
+                .status()?;
+            if !status.success() {
+                anyhow::bail!("release step failed");
+            }
+        }
+        Command::Publish {
+            rust,
+            python,
+            typescript,
+            dry_run,
+        } => {
+            let mut args = vec![];
+            if rust {
+                args.push("--rust");
+            }
+            if python {
+                args.push("--python");
+            }
+            if typescript {
+                args.push("--typescript");
+            }
+            if dry_run {
+                args.push("--dry-run");
+            }
+            let status = std::process::Command::new("bash")
+                .arg("scripts/publish.sh")
+                .args(args)
+                .status()?;
+            if !status.success() {
+                anyhow::bail!("publish step failed");
             }
         }
     }

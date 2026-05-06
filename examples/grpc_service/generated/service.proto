@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package ferryx_grpc_service;
+
+message EchoService {
+}
+
+service EchoServiceService {
+  rpc echo (echoRequest) returns (echoResponse);
+}
+

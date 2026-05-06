@@ -1,0 +1,9 @@
+from __future__ import annotations
+from typing import Protocol
+
+class EchoService:
+    ...
+    def echo(self, message: str) -> str: ...
+
+
+class StringError(Exception): ...

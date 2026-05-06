@@ -1,0 +1,86 @@
+{
+  "ir_version": "0.2.0",
+  "stability": "Beta",
+  "name": "ferryx_typescript_sdk",
+  "modules": [
+    {
+      "id": "crate",
+      "path": [
+        "crate"
+      ],
+      "docs": {
+        "summary": "",
+        "details": "",
+        "attributes": []
+      },
+      "classes": [
+        {
+          "id": "crate::UserApi",
+          "module_id": "crate",
+          "name": "UserApi",
+          "visibility": "Public",
+          "docs": {
+            "summary": "",
+            "details": "",
+            "attributes": []
+          },
+          "fields": [
+            {
+              "name": "service_name",
+              "ty": {
+                "rust": "String"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            }
+          ]
+        }
+      ],
+      "enums": [],
+      "traits": [],
+      "impls": [
+        {
+          "id": "crate::impl::UserApi",
+          "module_id": "crate",
+          "target": {
+            "rust": "UserApi"
+          },
+          "trait_name": null,
+          "methods": [
+            {
+              "name": "get_user_by_id",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": true,
+              "async_runtime": "Tokio",
+              "params": [
+                {
+                  "name": "id",
+                  "ty": {
+                    "rust": "String"
+                  },
+                  "ownership": "Owned"
+                }
+              ],
+              "output": {
+                "rust": "String"
+              },
+              "error": {
+                "rust": "String"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

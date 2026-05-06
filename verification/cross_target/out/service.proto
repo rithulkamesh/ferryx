@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package ferryx_typescript_sdk;
+
+message UserApi {
+  string service_name = 1;
+}
+
+service UserApiService {
+  rpc get_user (get_userRequest) returns (get_userResponse);
+}
+

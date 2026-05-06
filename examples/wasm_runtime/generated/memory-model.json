@@ -1,0 +1,6 @@
+{
+  "async": "promise-bridge",
+  "ownership": "host-bridge",
+  "package": "ferryx_wasm_runtime",
+  "transfer": "explicit-copy-or-borrowed-view"
+}

@@ -1,0 +1,14 @@
+name: Crates Publish
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish-dry-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Cargo publish dry-run in dependency order
+        run: bash scripts/publish.sh --rust --dry-run
+

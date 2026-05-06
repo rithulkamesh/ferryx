@@ -1,0 +1,10 @@
+{
+  "hashes": {
+    "docs.md": "08720d9ba8c4ed9e1a5b900327d9fa2a87367ba1b197758dab479cc96e24b235",
+    "ferryx_openapi_service/__init__.py": "1cd992d292ff75cc9822415f1471c252ad4d1c4e96b01747e291b9afcf7534f0",
+    "ferryx_openapi_service/__init__.pyi": "fd6196723828d95f036333dab73ab05b06146ab4e74c0ce7ae3e45ddb3b8ef31",
+    "graph.dot": "626ac55f217b690f4ff9012be15920237619c4ff44ca6770da031e88e0ee60eb",
+    "graph.mmd": "2a96e659b3ed8c8e0978935c1be42810d9384568edaa3cc71f51e30c85cc2ef4",
+    "ir.json": "30425d4166808bdadb6fb26c8936ad5612f8a115074bac3deabbb61e0d3f2bff"
+  }
+}

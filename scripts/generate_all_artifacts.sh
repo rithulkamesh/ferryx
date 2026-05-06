@@ -18,6 +18,10 @@ declare -a EXAMPLES=(
   "llm_runtime ferryx_llm"
   "high_performance_tensor ferryx_hpt"
   "ferryx_tensor_runtime ferryx_tensor_runtime"
+  "typescript_sdk ferryx_typescript_sdk"
+  "wasm_runtime ferryx_wasm_runtime"
+  "openapi_service ferryx_openapi_service"
+  "grpc_service ferryx_grpc_service"
 )
 
 for entry in "${EXAMPLES[@]}"; do

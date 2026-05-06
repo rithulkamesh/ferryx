@@ -3,10 +3,15 @@ members = [
     "core/ferryx-ir",
     "core/ferryx-rewrite",
     "core/ferryx-runtime",
+    "core/ferryx-target",
     "core/ferryx-macros",
     "core/ferryx-parser",
     "emitters/ferryx-python",
     "emitters/ferryx-plugin",
+    "emitters/ferryx-typescript",
+    "emitters/ferryx-wasm",
+    "emitters/ferryx-openapi",
+    "emitters/ferryx-grpc",
     "tooling/ferryx-build",
     "tooling/ferryx-cli",
     "tooling/ferryx-bench",
@@ -35,3 +40,4 @@ syn = { version = "2", features = ["full", "parsing", "extra-traits"] }
 tokio = { version = "1", features = ["rt-multi-thread", "macros", "fs"] }
 thiserror = "1"
 owo-colors = "4"
+toml = "0.8"

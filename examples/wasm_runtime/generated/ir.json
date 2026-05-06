@@ -1,0 +1,84 @@
+{
+  "ir_version": "0.2.0",
+  "stability": "Beta",
+  "name": "ferryx_wasm_runtime",
+  "modules": [
+    {
+      "id": "crate",
+      "path": [
+        "crate"
+      ],
+      "docs": {
+        "summary": "",
+        "details": "",
+        "attributes": []
+      },
+      "classes": [
+        {
+          "id": "crate::WasmMath",
+          "module_id": "crate",
+          "name": "WasmMath",
+          "visibility": "Public",
+          "docs": {
+            "summary": "",
+            "details": "",
+            "attributes": []
+          },
+          "fields": [
+            {
+              "name": "scale",
+              "ty": {
+                "rust": "f32"
+              },
+              "visibility": "Public",
+              "ownership": "Owned",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              }
+            }
+          ]
+        }
+      ],
+      "enums": [],
+      "traits": [],
+      "impls": [
+        {
+          "id": "crate::impl::WasmMath",
+          "module_id": "crate",
+          "target": {
+            "rust": "WasmMath"
+          },
+          "trait_name": null,
+          "methods": [
+            {
+              "name": "mul",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": false,
+              "async_runtime": null,
+              "params": [
+                {
+                  "name": "v",
+                  "ty": {
+                    "rust": "Vec < f32 >"
+                  },
+                  "ownership": "Owned"
+                }
+              ],
+              "output": {
+                "rust": "Vec < f32 >"
+              },
+              "error": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

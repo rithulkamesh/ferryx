@@ -13,4 +13,5 @@ This directory contains executable end-to-end validation workflows.
 - `snapshot/`: semantic snapshot baselines and reports.
 - `prompts/`: AI-assisted semantic verification prompts.
 - `personas/`: realistic user persona test projects.
+- `cross_target/`: semantic parity validation across emitters.
 

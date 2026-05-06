@@ -1,0 +1,72 @@
+{
+  "ir_version": "0.2.0",
+  "stability": "Beta",
+  "name": "ferryx_grpc_service",
+  "modules": [
+    {
+      "id": "crate",
+      "path": [
+        "crate"
+      ],
+      "docs": {
+        "summary": "",
+        "details": "",
+        "attributes": []
+      },
+      "classes": [
+        {
+          "id": "crate::EchoService",
+          "module_id": "crate",
+          "name": "EchoService",
+          "visibility": "Public",
+          "docs": {
+            "summary": "",
+            "details": "",
+            "attributes": []
+          },
+          "fields": []
+        }
+      ],
+      "enums": [],
+      "traits": [],
+      "impls": [
+        {
+          "id": "crate::impl::EchoService",
+          "module_id": "crate",
+          "target": {
+            "rust": "EchoService"
+          },
+          "trait_name": null,
+          "methods": [
+            {
+              "name": "echo",
+              "receiver": "Ref",
+              "docs": {
+                "summary": "",
+                "details": "",
+                "attributes": []
+              },
+              "is_async": true,
+              "async_runtime": "Tokio",
+              "params": [
+                {
+                  "name": "message",
+                  "ty": {
+                    "rust": "String"
+                  },
+                  "ownership": "Owned"
+                }
+              ],
+              "output": {
+                "rust": "String"
+              },
+              "error": {
+                "rust": "String"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

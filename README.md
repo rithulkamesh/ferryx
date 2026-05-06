@@ -11,7 +11,8 @@
 
 Rust systems. Native ecosystems. Zero wrapper drift.
 
-ferryx compiles Rust source metadata into semantic IR, then projects that IR into idiomatic ecosystem SDKs (Python today, TypeScript next).
+ferryx compiles Rust systems into native language ecosystems.
+It does this by projecting Rust semantics through a stable semantic IR and deterministic rewrite pipeline into target emitters.
 It includes a semantic rewrite engine that transforms Rust semantics into Python-native ergonomics before emission.
 
 ## 1) Hero
